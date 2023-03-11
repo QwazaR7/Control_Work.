@@ -15,7 +15,26 @@ void ArrayShow (string[] array)
         Console.WriteLine(array[i]);
 
 }
+
+string[] ModifiedArray(string[] array)
+{
+    string[] modArray = new string[array.Length];
+    int count = 0;
+    int i = 0;
+    while(count< array.Length)
+    {
+        if(array[count].Length <= 3)
+        {
+            modArray[i] = array[count];
+            count++;
+            i++;
+        }
+        else count++;
+    }
+    return modArray;
+}
 Console.Write("Укажите длину массива: ");
 int length = Convert.ToInt32(Console.ReadLine());
 string[] newArr = NewStringArray(length);
-ArrayShow(newArr);
+string[] modArr = ModifiedArray(newArr);
+ArrayShow(modArr);
