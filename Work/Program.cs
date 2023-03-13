@@ -3,7 +3,7 @@
     string[] array = new string[length];
     for(int i = 0; i < array.Length; i++)
     {
-        Console.Write($"Введите строку массива:\t");
+        Console.Write($"Введите строку массива: ");
         array[i] = Console.ReadLine();
     }
     return array;
